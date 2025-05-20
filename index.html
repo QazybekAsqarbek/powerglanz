@@ -3,240 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power Glanz – Сияющая чистота вашей посуды</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- Font Awesome (for icons) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <title>Power Glanz – Гель для мытья посуды</title>
+    <meta name="description" content="Power Glanz - эффективное средство для мытья посуды. Сияющая чистота без усилий.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧼</text></svg>">
+    <style>
+        /* Optional: Custom styles or overrides if Tailwind isn't enough */
+        /* For this example, we'll rely purely on Tailwind */
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        .hero-bg { /* Example for a subtle background pattern or image */
+            background-color: #f0f9ff; /* sky-50 */
+            /* background-image: url('path/to/your/subtle-bg-image.png'); */
+        }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-blue': '#0284c7', // sky-600
+              'brand-green': '#10b981', // emerald-500
+              'brand-light-blue': '#f0f9ff', // sky-50
+              'brand-gray': '#475569', // slate-600
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'], // Example: Using Inter font
+            },
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="bg-brand-light-blue text-slate-800 font-sans antialiased">
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
-                <i class="fas fa-soap me-2"></i>Power Glanz
+    <!-- Header / Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-extrabold text-brand-blue" aria-label="Power Glanz Home">
+                Power<span class="text-brand-green">Glanz</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#hero">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#features">Преимущества</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#product-details">О продукте</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#other-products">Другие товары</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Контакты</a>
-                    </li>
-                </ul>
+            <div class="space-x-4">
+                <a href="#features" class="text-brand-gray hover:text-brand-blue transition duration-300 font-medium">Преимущества</a>
+                <a href="#how-to-use" class="text-brand-gray hover:text-brand-blue transition duration-300 font-medium">Как использовать</a>
+                <a href="#contact" class="text-brand-gray hover:text-brand-blue transition duration-300 font-medium">Контакты</a>
+                <!-- Placeholder for future product links -->
+                <!-- <a href="#" class="text-brand-gray hover:text-brand-blue transition duration-300 font-medium">Другие продукты</a> -->
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section d-flex align-items-center">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="display-4 fw-bold">Power Glanz</h1>
-                    <p class="lead mb-4">Гель для мытья посуды, который дарит безупречную чистоту и сияющий блеск!</p>
-                    <p>Эффективно удаляет жир и засохшие остатки пищи, оставляя посуду кристально чистой.</p>
-                    <a href="#product-details" class="btn btn-primary btn-lg me-2">Узнать больше</a>
-                    <a href="https://wa.me/77057712881" target="_blank" class="btn btn-success btn-lg"><i class="fab fa-whatsapp me-2"></i>Заказать по WhatsApp</a>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg py-16 sm:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-blue mb-6 leading-tight">
+                        Power Glanz: <span class="block sm:inline">Сияющая чистота</span> без усилий!
+                    </h1>
+                    <p class="text-lg sm:text-xl text-brand-gray mb-8">
+                        Эффективное удаление жира и безупречный блеск вашей посуды. Откройте для себя новый уровень чистоты с Power Glanz.
+                    </p>
+                    <a href="#features"
+                       role="button"
+                       tabindex="0"
+                       aria-label="Узнать больше о Power Glanz"
+                       class="inline-block bg-brand-green hover:bg-emerald-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transform transition duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-50">
+                        Узнать больше
+                    </a>
                 </div>
-                <div class="col-lg-6 text-center mt-4 mt-lg-0">
-                    <!-- Placeholder for product image -->
-                    <img src="https://via.placeholder.com/450x450.png?text=Power+Glanz+Bottle" alt="Power Glanz - Гель для мытья посуды" class="img-fluid rounded shadow-lg product-image">
-                    <!-- Replace with your actual product image: e.g., <img src="images/power-glanz-bottle.png" ... > -->
+                <div class="flex justify-center items-center">
+                    <!-- PRODUCT IMAGE PLACEHOLDER -->
+                    <img src="https://via.placeholder.com/400x500.png?text=Power+Glanz+Bottle"
+                         alt="Бутылка геля для мытья посуды Power Glanz"
+                         class="rounded-lg shadow-2xl max-w-sm w-full">
+                    <!-- Replace with your actual product image: e.g., <img src="./images/powerglanz-bottle.png" alt="Power Glanz Bottle"> -->
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Features Section -->
-    <section id="features" class="py-5">
-        <div class="container text-center">
-            <h2 class="mb-5 fw-light">Почему выбирают Power Glanz?</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="feature-icon-wrapper">
-                        <i class="fas fa-hand-sparkles fa-3x mb-3 text-primary"></i>
+        <!-- Benefits Section -->
+        <section id="features" class="py-16 sm:py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-brand-blue text-center mb-12 sm:mb-16">
+                    Преимущества Power Glanz
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-slate-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="flex items-center justify-center bg-brand-green text-white rounded-full w-12 h-12 mb-4">
+                            <!-- SVG Icon: Sparkles -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-brand-blue mb-2">Мощная формула</h3>
+                        <p class="text-brand-gray">
+                            Эффективно расщепляет жир и засохшие остатки пищи благодаря 5–15% анионным ПАВ. Ваша посуда будет сиять чистотой.
+                        </p>
                     </div>
-                    <h4 class="fw-normal">Мощное Очищение</h4>
-                    <p>Справляется с самыми стойкими загрязнениями, жиром и налетом.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="feature-icon-wrapper">
-                        <i class="fas fa-star fa-3x mb-3 text-primary"></i>
+                    <div class="bg-slate-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="flex items-center justify-center bg-brand-green text-white rounded-full w-12 h-12 mb-4">
+                            <!-- SVG Icon: Leaf -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-brand-blue mb-2">Бережный уход</h3>
+                        <p class="text-brand-gray">
+                            Содержит <5% неионогенные ПАВ для мягкого, но эффективного очищения, заботясь о вашей посуде и руках.
+                        </p>
                     </div>
-                    <h4 class="fw-normal">Сияющий Блеск</h4>
-                    <p>Ваша посуда будет сиять чистотой без разводов.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="feature-icon-wrapper">
-                        <i class="fas fa-leaf fa-3x mb-3 text-primary"></i>
+                    <div class="bg-slate-50 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="flex items-center justify-center bg-brand-green text-white rounded-full w-12 h-12 mb-4">
+                            <!-- SVG Icon: Chat Bubble -->
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-brand-blue mb-2">Приятный аромат</h3>
+                        <p class="text-brand-gray">
+                            Оставляет посуду не только идеально чистой, но и с легким, освежающим ароматом благодаря качественным ароматизирующим добавкам.
+                        </p>
                     </div>
-                    <h4 class="fw-normal">Экономичный Расход</h4>
-                    <p>Концентрированная формула обеспечивает длительное использование.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Product Details Section -->
-    <section id="product-details" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5 fw-light">Все о Power Glanz</h2>
-            <div class="row">
-                <div class="col-lg-7">
-                    <h3 class="mb-3">Гель для мытья посуды "Power Glanz"</h3>
-                    <p class="lead">Объем: 500 мл</p>
-                    
-                    <div class="accordion" id="productInfoAccordion">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Состав
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#productInfoAccordion">
-                                <div class="accordion-body">
-                                    5–15% анионные ПАВ; <5% неионогенные ПАВ; ароматизирующие добавки, консерванты.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Способ применения
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#productInfoAccordion">
-                                <div class="accordion-body">
-                                    Нанесите небольшое количество средства на влажную губку или непосредственно на посуду. При необходимости добавьте средство. После мытья тщательно ополосните посуду водой.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Меры предосторожности
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#productInfoAccordion">
-                                <div class="accordion-body">
-                                    Беречь от детей. Избегать попадания в глаза. При попадании в глаза немедленно промойте их большим количеством воды. При проглатывании немедленно обратитесь за медицинской помощью и покажите упаковку или этикетку продукта.
-                                </div>
-                            </div>
-                        </div>
-                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Условия хранения и срок годности
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#productInfoAccordion">
-                                <div class="accordion-body">
-                                    Хранить в плотно закрытой упаковке при температуре от +5°C до +35°C, вдали от прямых солнечных лучей и источников тепла.
-                                    <br><strong>Срок годности:</strong> 24 месяца с даты изготовления.
-                                </div>
-                            </div>
+        <!-- How to Use Section -->
+        <section id="how-to-use" class="py-16 sm:py-20 bg-brand-light-blue">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-brand-blue text-center mb-12 sm:mb-16">
+                    Как использовать Power Glanz
+                </h2>
+                <div class="max-w-3xl mx-auto space-y-8">
+                    <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-brand-green text-white font-bold text-xl">1</div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-brand-blue mb-1">Нанесите средство</h3>
+                            <p class="text-brand-gray">Нанесите небольшое количество средства на влажную губку или непосредственно на посуду.</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-5 text-center mt-4 mt-lg-0 d-flex align-items-center justify-content-center">
-                     <!-- You can put another image or infographic here -->
-                     <img src="https://via.placeholder.com/350x400.png?text=Clean+Dishes+Concept" alt="Чистая посуда" class="img-fluid rounded">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Other Products Section (Placeholder) -->
-    <section id="other-products" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5 fw-light">Наша Линейка Чистящих Средств</h2>
-            <p class="text-center text-muted mb-4">Скоро здесь появятся другие наши эффективные продукты для чистоты вашего дома!</p>
-            <div class="row">
-                <!-- Example Product Card (duplicate for more products) -->
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 text-center">
-                        <img src="https://via.placeholder.com/300x200.png?text=Upcoming+Product+1" class="card-img-top" alt="Будущий продукт 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Средство для полов (Скоро)</h5>
-                            <p class="card-text">Идеальная чистота и свежесть для ваших полов.</p>
-                            <a href="#" class="btn btn-outline-primary disabled">Узнать больше</a>
+                    <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-brand-green text-white font-bold text-xl">2</div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-brand-blue mb-1">Добавьте при необходимости</h3>
+                            <p class="text-brand-gray">При необходимости добавьте еще немного средства для достижения оптимального результата.</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 text-center">
-                        <img src="https://via.placeholder.com/300x200.png?text=Upcoming+Product+2" class="card-img-top" alt="Будущий продукт 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Очиститель для стекол (Скоро)</h5>
-                            <p class="card-text">Кристальная прозрачность без разводов.</p>
-                            <a href="#" class="btn btn-outline-primary disabled">Узнать больше</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 text-center">
-                        <img src="https://via.placeholder.com/300x200.png?text=Upcoming+Product+3" class="card-img-top" alt="Будущий продукт 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Универсальный спрей (Скоро)</h5>
-                            <p class="card-text">Для быстрой уборки различных поверхностей.</p>
-                            <a href="#" class="btn btn-outline-primary disabled">Узнать больше</a>
+                    <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-brand-green text-white font-bold text-xl">3</div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-brand-blue mb-1">Тщательно ополосните</h3>
+                            <p class="text-brand-gray">После мытья тщательно ополосните посуду чистой водой.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact & Footer -->
-    <footer id="contact" class="py-5 bg-dark text-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <h5 class="fw-bold"><i class="fas fa-soap me-2"></i>Power Glanz</h5>
-                    <p>Ваш надежный помощник в создании идеальной чистоты.</p>
-                     <p>Сайт: <a href="http://www.powerglanz-kz.com" target="_blank" class="text-white-50">www.powerglanz-kz.com</a></p>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h5>Контактная информация</h5>
-                    <p><i class="fas fa-map-marker-alt me-2"></i>Производитель: TOO «AVENTUS GROUP»<br>
-                    РК, г. Астана, ул. Казыбек би, 11</p>
-                    <p><i class="fas fa-phone me-2"></i>Телефон справочной службы: <a href="tel:+77057712881" class="text-white-50">8 705 771 2881</a></p>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h5>Мы в соцсетях</h5>
-                    <a href="#" class="text-white-50 me-2"><i class="fab fa-instagram fa-2x"></i></a>
-                    <a href="#" class="text-white-50 me-2"><i class="fab fa-facebook fa-2x"></i></a>
-                    <a href="https://wa.me/77057712881" target="_blank" class="text-white-50"><i class="fab fa-whatsapp fa-2x"></i></a>
+        <!-- Safety & Storage Section -->
+        <section id="safety" class="py-16 sm:py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-brand-blue text-center mb-12 sm:mb-16">
+                    Меры предосторожности и хранение
+                </h2>
+                <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                    <div class="bg-slate-50 p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-brand-blue mb-4">Меры предосторожности:</h3>
+                        <ul class="list-disc list-inside space-y-2 text-brand-gray">
+                            <li>Беречь от детей.</li>
+                            <li>Избегать попадания в глаза. При попадании в глаза немедленно промойте их большим количеством воды.</li>
+                            <li>При проглатывании немедленно обратитесь за медицинской помощью и покажите упаковку или этикетку продукта.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold text-brand-blue mb-4">Условия хранения:</h3>
+                        <p class="text-brand-gray mb-2">
+                            Хранить в плотно закрытой упаковке при температуре от +5°C до +35°C, вдали от прямых солнечных лучей и источников тепла.
+                        </p>
+                        <p class="text-brand-gray mb-1"><span class="font-semibold">Срок годности:</span> 24 месяца с даты изготовления.</p>
+                        <p class="text-brand-gray"><span class="font-semibold">Объем:</span> 500 мл.</p>
+                        <p class="text-brand-gray mt-4"><span class="font-semibold">Состав:</span> 5–15% анионные ПАВ; <5% неионогенные ПАВ; ароматизирующие добавки, консерванты.</p>
+                    </div>
                 </div>
             </div>
-            <hr class="bg-white-50">
-            <div class="text-center text-white-50">
-                <p>© <span id="currentYear"></span> Power Glanz. Все права защищены.</p>
+        </section>
+
+        <!-- Manufacturer / Contact Section -->
+        <section id="contact" class="py-16 sm:py-20 bg-slate-800 text-slate-200">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8">
+                    О производителе и контакты
+                </h2>
+                <div class="max-w-2xl mx-auto">
+                    <p class="text-lg mb-2">ТОО «AVENTUS GROUP»</p>
+                    <p class="text-slate-300 mb-2">РК, г. Астана, ул. Казыбек би, 11</p>
+                    <p class="text-slate-300 mb-4">
+                        Телефон справочной службы:
+                        <a href="tel:+77057712881" class="text-brand-green hover:text-emerald-400 font-semibold">8 705 771 2881</a>
+                    </p>
+                    <p class="text-slate-300">
+                        Сайт:
+                        <a href="http://www.powerglanz-kz.com" target="_blank" rel="noopener noreferrer" class="text-brand-green hover:text-emerald-400 font-semibold">www.powerglanz-kz.com</a>
+                    </p>
+                </div>
             </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>© <span id="currentYear"></span> Power Glanz. Все права защищены.</p>
+            <p class="text-sm mt-1">Разработано с ❤️</p>
         </div>
     </footer>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+    <script>
+        // Simple script to set the current year in the footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
