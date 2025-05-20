@@ -1,0 +1,157 @@
+:root {
+    --primary-color: #28a745; /* Green for "clean" and "power" */
+    --secondary-color: #007bff; /* A contrasting blue, or keep it simple with greys */
+    --light-bg: #f8f9fa;
+    --dark-text: #343a40;
+    --light-text: #f8f9fa;
+}
+
+body {
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 70px; /* Adjust if navbar height changes */
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar-brand {
+    color: var(--primary-color) !important;
+}
+.navbar-brand i {
+    color: var(--primary-color);
+}
+
+.nav-link {
+    color: var(--dark-text) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, rgba(240, 249, 255, 0.9), rgba(204, 229, 255, 0.9)), url('https://via.placeholder.com/1920x1080.png?text=Subtle+Clean+Background'); /* Replace with a nice background image */
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh; /* Make it almost full screen */
+    color: var(--dark-text);
+    padding: 60px 0;
+}
+
+.hero-section h1 {
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.hero-section .product-image {
+    max-height: 450px; /* Control the image size */
+    object-fit: contain; /* So it doesn't stretch weirdly if aspect ratio is off */
+    /* animation: float 3s ease-in-out infinite; */ /* Optional subtle animation */
+}
+
+/* @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+} */
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1e7e34; /* Darker shade of primary */
+    border-color: #1e7e34;
+}
+
+.btn-success { /* For WhatsApp */
+    background-color: #25D366;
+    border-color: #25D366;
+}
+.btn-success:hover {
+    background-color: #1DA851;
+    border-color: #1DA851;
+}
+
+
+/* Features Section */
+#features .feature-icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #e9f5ec; /* Light green background */
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+#features .feature-icon-wrapper i {
+    color: var(--primary-color);
+}
+
+/* Product Details Section */
+#product-details .accordion-button {
+    font-weight: 500;
+}
+#product-details .accordion-button:not(.collapsed) {
+    color: var(--light-text);
+    background-color: var(--primary-color);
+}
+#product-details .accordion-button:not(.collapsed)::after {
+   filter: brightness(0%) invert(100%); /* Make arrow white */
+}
+#product-details .accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25); /* Green focus outline */
+}
+
+
+/* Other Products Section */
+#other-products .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+#other-products .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+#other-products .card-img-top {
+    height: 200px;
+    object-fit: cover; /* Ensures images cover the area without distortion */
+}
+
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Bootstrap dark color */
+}
+footer a, footer a:hover {
+    text-decoration: none;
+}
+footer .text-white-50 {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+footer .text-white-50:hover {
+    color: rgba(255, 255, 255, 1) !important;
+}
+footer hr {
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* General Utility */
+.fw-light { font-weight: 300 !important; }
+.fw-normal { font-weight: 400 !important; }
+.fw-bold { font-weight: 700 !important; }
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .hero-section {
+        min-height: auto;
+        padding: 80px 0;
+    }
+    .hero-section .product-image {
+        max-height: 300px;
+    }
+}
